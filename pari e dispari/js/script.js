@@ -20,16 +20,12 @@ console.log('il numero del computer è',computerNumber);
 const numbSum = userNumber + computerNumber;
 console.log(numbSum);
 
-//stabilire se la somma dei numeri è pari o dispari
-let numbState
-if(numbSum % 2 === 0) {
-    numbState = 'pari';
-} else {
-    numbState = 'dispari'
-}
+//stabilisco se è pari o dispari
+const sumResult = isEvenOrOdd(numbSum);
+console.log(sumResult);
 
 //dichiarare chi ha vinto
-if(userEvenOrOdd === numbState) {
+if(userEvenOrOdd === sumResult) {
     alert('hai vinto');
 } else {
     alert('ha vinto il computer');
@@ -40,4 +36,18 @@ if(userEvenOrOdd === numbState) {
 //genera un numero random da 1 a 5
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+//function 2
+//stabilisce se un numero è pari o dispari
+function isEvenOrOdd(number) {
+    let eveneOrOdd;
+
+    if(number % 2 === 0) {
+        eveneOrOdd = 'pari';
+    } else {
+        eveneOrOdd = 'dispari';
+    }
+
+    return eveneOrOdd;
 }
